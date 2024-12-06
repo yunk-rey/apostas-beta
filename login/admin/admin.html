@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Administrador</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body id="admin-body">
+    <div id="admin-dashboard">
+        <h1>Painel do Administrador</h1>
+
+        <!-- Formulário para adicionar apostas -->
+        <form id="bet-form">
+            <input type="text" id="bet-description" placeholder="Descrição da aposta" required>
+            <input type="text" id="bet-team1" placeholder="Time 1" required>
+            <input type="text" id="bet-team2" placeholder="Time 2" required>
+            <input type="number" id="bet-odd1" placeholder="Odd do Time 1" required>
+            <input type="number" id="bet-odd2" placeholder="Odd do Time 2" required>
+            <button type="submit">Adicionar Aposta</button>
+        </form>
+
+        <table id="admin-bets-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Time 1</th>
+                    <th>Odd 1</th>
+                    <th>Time 2</th>
+                    <th>Odd 2</th>
+                    <th>Status</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="logout">Sair</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

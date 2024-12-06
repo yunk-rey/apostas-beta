@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4; /* Preto elegante */
+}
+
+
+#caixa {
+
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Cabeçalho (sidebar transformada em cabeçalho fixo) */
+.header {
+    width: 100%;
+    background-color: #1e1e1e; /* Cor de fundo do cabeçalho */
+    color: #d1d1e0; /* Cor do texto */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #a29bfe; /* Cor do título */
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.header ul li {
+    display: inline-block;
+}
+
+.header button {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header button:hover {
+    background-color: #a29bfe;
+}
+/* Sidebar do Dashboard */
+.sidebar {
+    width: 240px;
+    background-color: #1e1e1e; /* Preto mais claro para contraste */
+    color: #d1d1e0; /* Roxo claro para texto */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #a29bfe; /* Roxo elegante */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li button {
+    background-color: #2c2c2c; /* Fundo preto claro */
+    color: #a29bfe; /* Roxo elegante */
+    border: none;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li button:hover {
+    background-color: #3b3b3b; /* Tom mais claro no hover */
+}
+
+/* Área de Conteúdo */
+.content {
+    flex: 1;
+    padding: 30px;
+    margin-left: 700px; /* Ajustado para espaço da sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #d1d1e0; /* Roxo claro para texto */
+}
+
+/* Seções de conteúdo */
+.section {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    left: 200px;
+    /* Pode manter o alinhamento do texto como centralizado */
+    position: relative; /* Torna possível mover o título */
+    color: #6A0DAD; /* Roxo claro */
+}
+
+
+
+
+.bet-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+}
+
+.bet-table th, .bet-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #333;
+    font-size: 16px;
+}
+
+.bet-table th {
+    background-color: #2c2c2c; /* Preto claro */
+    color: #a29bfe; /* Roxo elegante */
+}
+
+.bet-table td {
+    background-color: #1e1e1e; /* Preto para contraste */
+}
+
+.bet-button, .odd-choice {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #6c5ce7; /* Roxo suave */
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.bet-button:hover, .odd-choice:hover {
+    background-color: #a29bfe; /* Tom mais claro no hover */
+}
+
+.selected {
+    background-color: #4a3e9d; /* Roxo mais escuro para destacar seleção */
+}
+
+.bet-amount {
+    color: #6A0DAD;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+
+.bet-amount input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2c2c2c; /* Fundo preto claro */
+    color: #d1d1e0; /* Roxo claro */
+}
+
+/* Estilos do Bilhete */
+#bet-ticket {
+    background-color: #1e1e1e; /* Preto para bilhete */
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #d1d1e0; /* Roxo claro */
+}
+
+#result-message {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #6c5ce7; /* Roxo suave */
+}
+
+/* Botões de ação */
+.btn {
+    background-color: #6c5ce7; /* Roxo suave */
+    color: rgb(245, 241, 241);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a3e9d; /* Tom mais escuro no hover */
+}
+
+#back-to-index {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilos do Bilhete de Aposta */
+#bilhete {
+    padding: 10px;
+    color: #333;
+    display: none; /* Mantém visibilidade controlada com JS */
+}
+
+/* Container para os bilhetes, usando Flexbox */
+#bet-tickets-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os bilhetes quebrem para a próxima linha */
+    gap: 70px; /* Espaçamento entre os bilhetes */
+    justify-content: flex-start; /* Alinha os bilhetes à esquerda */
+    margin-left: -420px; /* Ajusta o espaço à esquerda */
+}
+
+/* Caixa individual para cada bilhete */
+.bet-ticket {
+    background-color: #ffffff; /* Caixa branca para cada bilhete */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    width: 300px; /* Largura fixa para cada bilhete */
+    flex: 1 1 100px; /* Flexbox para permitir responsividade */
+    min-width: 190px; /* Garantir que o bilhete não fique muito pequeno em telas pequenas */
+}
+
+.bet-ticket h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Cor de título escura */
+}
+
+.bet-ticket p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Botão de ação */
+#bilhete .btn {
+    margin-top: 20px;
+    background-color: #6c5ce7; /* Roxo suave */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+

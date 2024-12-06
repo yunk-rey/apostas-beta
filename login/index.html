@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Imperial Bet</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section id="login-section">
+        <h1>Imperial Bet</h1>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu usuário" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="login-error" class="hidden">Usuário ou senha incorretos!</p>
+    </section>
+
+    <script src="login.js"></script>
+</body>
+</html>

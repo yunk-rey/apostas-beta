@@ -14,20 +14,20 @@ body {
     font-size: 16px;
 }
 
-/* Cabeçalho (sidebar transformada em cabeçalho fixo) */
 .header {
     width: 100%;
     background-color: #1e1e1e; /* Cor de fundo do cabeçalho */
     color: #d1d1e0; /* Cor do texto */
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
     align-items: center;
     position: fixed; /* Fixa o cabeçalho no topo */
     top: 0;
     left: 0;
     z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
 }
+
 
 .header h2 {
     margin: 0;
@@ -52,9 +52,10 @@ body {
     border: none;
     padding: 10px 20px;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-right: 40px; /* Espaçamento entre os botões, se necessário */
 }
 
 .header button:hover {

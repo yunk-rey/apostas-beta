@@ -16,11 +16,23 @@ loginForm.addEventListener('submit', (event) => {
     const password = passwordInput.value;
 
     if (username === credentials.admin.username && password === credentials.admin.password) {
-        window.location.href = "admin/admin.html";  // Redireciona para a página do Admin na pasta 'admin'
+        window.location.href = "admin/admin.html";  // Redireciona para a página do Admin
     } else if (username === credentials.user.username && password === credentials.user.password) {
-        window.location.href = "user/user.html";  // Redireciona para a página do Usuário na pasta 'user'
+        window.location.href = "user/user.html";  // Redireciona para a página do Usuário
     } else {
         loginError.classList.remove('hidden');
+        usernameInput.classList.add('error');
+        passwordInput.classList.add('error');
     }
-    
+});
+
+// Remove estilo de erro ao digitar
+usernameInput.addEventListener('input', () => {
+    usernameInput.classList.remove('error');
+    loginError.classList.add('hidden');
+});
+
+passwordInput.addEventListener('input', () => {
+    passwordInput.classList.remove('error');
+    loginError.classList.add('hidden');
 });
